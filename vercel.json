@@ -3,17 +3,17 @@
 {
     "builds": [
         {
-            "src": "auth.py",
+            "src": "main/auth.py",
             "use": "@vercel/python"
         }
     ],
     "routes": [
         {
             "src": "(.*)",
-            "dest": "auth.py"
+            "dest": "main/auth.py"
         },
         {
-            "src": "./(.*)",
+            "src": "main/(.*)",
             "headers": {"Access-Control-Allow-Origin": "*"},
             "continue": true
         }

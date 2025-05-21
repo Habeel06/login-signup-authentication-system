@@ -1,4 +1,4 @@
 {
 "builds": [{ "src":"auth.py","use":"@vercel/python"}],
-"routes": [{ "src":"/{.*}","use":"auth.py"}]
+"routes": [{ "src":"/{.*}","dest":"auth.py"}]
 }
